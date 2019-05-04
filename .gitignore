@@ -7,7 +7,7 @@ deps/deps.jl
 
 \.vscode/
 
-jupyter
+jupyter/.ipynb_checkpoints
 
 
 
