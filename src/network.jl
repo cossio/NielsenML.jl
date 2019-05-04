@@ -32,7 +32,7 @@ function feedforward!(a::NTuple{L, Vector{Float64}},
                       net::Network{L,Lm1}) where {L,Lm1}
     check_sizes(net, a, z)
     for l = 1:L-1
-        mul!(z[l], net.w[l], a[l])
+        mul!(z[l], net.w[l], a[l])  # z[l] = net.w[l] * a[l]
         z[l] .+= net.b[l]
         a[l+1] .= sigmoid.(z[l])
     end
